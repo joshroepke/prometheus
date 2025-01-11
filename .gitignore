@@ -13,3 +13,10 @@ crash.log
 
 # Ignore any .env fiels used for environment variables
 .env
+
+# Ignore venv directory 
+venv/*
+.venv
+
+# Personal Documentation
+notes.MD

@@ -4,6 +4,16 @@ provider "kubernetes" {
 }
 
 
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "2.35.1"
+    }
+  }
+  required_version = ">=1.1.7"
+}
+
 data "kubernetes_service_v1" "service_details" {
   metadata {
     name      = "flask-app-service"

@@ -2,13 +2,18 @@ global:
   scrape_interval: 15s
 
 scrape_configs:
-  - job_name: 'prometheus'
+  - job_name: "prometheus"
     scrape_interval: 5s
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ["localhost:9090"]
 
-  - job_name: 'flask-app'
+  - job_name: "flask-app"
     scrape_interval: 5s
     metrics_path: /custom-metrics
     static_configs:
-      - targets: ['flask-app:8080']
+      - targets: ["flask-app:8080"]
+
+  - job_name: "jaeger"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["jaeger:14269"]
