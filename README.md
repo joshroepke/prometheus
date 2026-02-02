@@ -1,4 +1,4 @@
-# Flask App 
+# Flask App with Prometheus
 
 ### How to build and run the Docker container locally
 
